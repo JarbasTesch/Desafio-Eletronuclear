@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <style>
+    .bg-custom {
+        background-color: #cccfcc;
+    }
+    </style>
+
+    <title>Desafio Eletronuclear</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Login - Solução web</h1>
+
+        <div class="card mx-auto bg-custom" style="max-width: 400px;">
+            <div class="card-body">
+                <form method="POST" class="popup">
+                    {{ form.csrf_token }}
+
+                    <div class="div-input">
+                        {{ form.email.label(class="label") }}
+                        <div class="input-group">
+                            {{ form.email(class="form-control rounded", placeholder="Seu email") }}
+                        </div>
+                    </div>
+
+                    <div class="div-input">
+                        {{ form.senha.label(class="label") }}
+                        {{ form.senha(class="form-control", placeholder="Sua senha") }}
+                    </div>
+
+                    <button type="submit" class="btn btn-outline-primary btn-block">Entrar</button>
+                </form>
+
+                {% if form.errors %}
+                <div class="alert alert-danger mt-3">
+                    <ul>
+                        {% for error in form.errors.values() %}
+                        <li>{{ error[0] }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+    </div>
+</body>
+
+</html>
