@@ -2,10 +2,11 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from flask_bcrypt import Bcrypt
+import os
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///dadosgerais.db"
-app.config["SECRET_KEY"] = "A2b9C1d8E3fG4h6I7j0Kl2Mn4OpQr5TuVxY"
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
+app.config["SECRET_KEY"] = os.getenv("SECRETKEY")
 app.config["UPLOAD_FOLDER"] = "static/arquivos"
 
 
