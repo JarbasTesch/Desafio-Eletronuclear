@@ -62,6 +62,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
+                            <!-- Mês do orçamento -->
                             <div class="form-group">
                                 <label for="mes_orcamento">Referente a Qual Mês?</label>
                                 <select class="form-control" id="mes_orcamento" name="mes_orcamento">
@@ -69,7 +70,15 @@
                                     <option value="Janeiro" {% if form_edicao.mes_orcamento.data == 'Janeiro' %} selected {% endif %}>Janeiro</option>
                                     <option value="Fevereiro" {% if form_edicao.mes_orcamento.data == 'Fevereiro' %} selected {% endif %}>Fevereiro</option>
                                     <option value="Março" {% if form_edicao.mes_orcamento.data == 'Março' %} selected {% endif %}>Março</option>
-                                    <!-- Adicione as outras opções de mês aqui -->
+                                    <option value="Abril" {% if form_edicao.mes_orcamento.data == 'Abril' %} selected {% endif %}>Abril</option>
+                                    <option value="Maio" {% if form_edicao.mes_orcamento.data == 'Maio' %} selected {% endif %}>Maio</option>
+                                    <option value="Junho" {% if form_edicao.mes_orcamento.data == 'Junho' %} selected {% endif %}>Junho</option>
+                                    <option value="Julho" {% if form_edicao.mes_orcamento.data == 'Julho' %} selected {% endif %}>Julho</option>
+                                    <option value="Agosto" {% if form_edicao.mes_orcamento.data == 'Agosto' %} selected {% endif %}>Agosto</option>
+                                    <option value="Setembro" {% if form_edicao.mes_orcamento.data == 'Setembro' %} selected {% endif %}>Setembro</option>
+                                    <option value="Outubro" {% if form_edicao.mes_orcamento.data == 'Outubro' %} selected {% endif %}>Outubro</option>
+                                    <option value="Novembro" {% if form_edicao.mes_orcamento.data == 'Novembro' %} selected {% endif %}>Novembro</option>
+                                    <option value="Dezembro" {% if form_edicao.mes_orcamento.data == 'Dezembro' %} selected {% endif %}>Dezembro</option>
                                 </select>
                             </div>
                         </div>
